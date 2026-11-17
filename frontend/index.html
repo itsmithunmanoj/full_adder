@@ -1,0 +1,896 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Full Adder Simulator | Digital Logic Lab</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="app-container">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <div class="brand">
+                <div class="brand-icon">FA</div>
+                <div>
+                    <h2>Full ADDER</h2>
+                    <span>SIMULATOR</span>
+                </div>
+            </div>
+
+            <div class="menu-heading">MAIN MENU</div>
+
+            <nav class="navigation">
+
+                <button class="nav-item active" data-page="dashboard">
+                    <span>▦</span> Dashboard
+                </button>
+
+                <button class="nav-item" data-page="simulator">
+                    <span>◈</span> Full Adder Simulator
+                </button>
+
+                <button class="nav-item" data-page="circuit">
+                    <span>⌘</span> Logic Circuit
+                </button>
+
+                <button class="nav-item" data-page="truth-table">
+                    <span>▤</span> Truth Table
+                </button>
+
+                <button class="nav-item" data-page="calculator">
+                    <span>＋</span> Binary Calculator
+                </button>
+
+                <div class="menu-heading">LEARNING</div>
+
+                <button class="nav-item" data-page="learning">
+                    <span>▣</span> Learning Mode
+                </button>
+
+                <button class="nav-item" data-page="quiz">
+                    <span>✎</span> Practice & Quiz
+                </button>
+
+                <button class="nav-item" data-page="history">
+                    <span>◷</span> History
+                </button>
+
+                <div class="menu-heading">PROJECT</div>
+
+                <button class="nav-item" data-page="about">
+                    <span>ⓘ</span> About Project
+                </button>
+
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="status-dot"></div>
+                <span>System Online</span>
+                <span class="version">v1.0</span>
+            </div>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+
+            <header class="topbar">
+
+                <div>
+                    <p class="breadcrumb">Digital Logic Lab / Dashboard</p>
+                    <h2>Welcome to LogicLab</h2>
+                </div>
+
+                <div class="topbar-actions">
+                    <button id="themeToggle" class="theme-button">
+                        ☀ Light Mode
+                    </button>
+                </div>
+
+            </header>
+
+
+            <!-- DASHBOARD PAGE -->
+            <section class="page active" id="dashboard">
+
+                <div class="hero-section">
+
+                    <div class="hero-content">
+                        <span class="eyebrow">INTERACTIVE LEARNING PLATFORM</span>
+
+                        <h1>Understand Digital Logic.<br>
+                            <span>Experience Binary Addition.</span>
+                        </h1>
+
+                        <p>
+                            Explore how a Full Adder works through interactive
+                            simulations, logic gates and binary calculations.
+                        </p>
+
+                        <button class="primary-button" data-page="simulator">
+                            Start Simulation →
+                        </button>
+                    </div>
+
+                    <div class="hero-visual">
+                        <div class="chip">
+                            <span>FULL</span>
+                            <strong>ADDER</strong>
+                            <small>01 + 10 + 1</small>
+                            <div class="chip-line"></div>
+                            <div class="chip-result">SUM · CARRY</div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="section-heading">
+                    <div>
+                        <h2>Learning Modules</h2>
+                        <p>Explore the tools available in LogicLab.</p>
+                    </div>
+                </div>
+
+
+                <div class="module-grid">
+
+                    <div class="module-card" data-page="simulator">
+                        <div class="module-icon blue">◈</div>
+                        <h3>Full Adder Simulator</h3>
+                        <p>Change binary inputs and calculate Sum and Carry.</p>
+                        <span class="card-link">Explore module →</span>
+                    </div>
+
+                    <div class="module-card" data-page="circuit">
+                        <div class="module-icon purple">⌘</div>
+                        <h3>Logic Circuit</h3>
+                        <p>Understand XOR, AND and OR gate operations.</p>
+                        <span class="card-link">Explore module →</span>
+                    </div>
+
+                    <div class="module-card" data-page="truth-table">
+                        <div class="module-icon cyan">▤</div>
+                        <h3>Truth Table</h3>
+                        <p>Study all eight Full Adder input combinations.</p>
+                        <span class="card-link">Explore module →</span>
+                    </div>
+
+                    <div class="module-card" data-page="calculator">
+                        <div class="module-icon orange">＋</div>
+                        <h3>Binary Calculator</h3>
+                        <p>Perform binary addition using Full Adder logic.</p>
+                        <span class="card-link">Explore module →</span>
+                    </div>
+
+                    <div class="module-card" data-page="learning">
+                        <div class="module-icon green">▣</div>
+                        <h3>Learning Mode</h3>
+                        <p>Learn Full Adder concepts step by step.</p>
+                        <span class="card-link">Explore module →</span>
+                    </div>
+
+                    <div class="module-card" data-page="quiz">
+                        <div class="module-icon pink">✎</div>
+                        <h3>Practice & Quiz</h3>
+                        <p>Test your knowledge with interactive questions.</p>
+                        <span class="card-link">Explore module →</span>
+                    </div>
+
+                </div>
+
+
+                <div class="info-panel">
+                    <div>
+                        <span class="eyebrow">PROJECT OVERVIEW</span>
+                        <h2>What is a Full Adder?</h2>
+                        <p>
+                            A Full Adder is a combinational digital circuit
+                            that adds three binary inputs: A, B and Carry-in.
+                            It produces two outputs: Sum and Carry-out.
+                        </p>
+                    </div>
+
+                    <div class="formula">
+                        <p>SUM</p>
+                        <strong>A ⊕ B ⊕ Cin</strong>
+
+                        <p>CARRY OUT</p>
+                        <strong>AB + BCin + ACin</strong>
+                    </div>
+                </div>
+
+            </section>
+
+
+            <!-- PLACEHOLDER MODULE PAGES -->
+           
+<section class="page" id="simulator">
+
+    <div class="simulator-header">
+        <div>
+            <span class="eyebrow">INTERACTIVE DIGITAL LOGIC</span>
+            <h1>Full Adder Simulator</h1>
+            <p>Change the binary inputs and observe the outputs instantly.</p>
+        </div>
+
+        <div class="live-status">
+            <span class="status-dot"></span>
+            LIVE SIMULATION
+        </div>
+    </div>
+
+    <div class="simulator-grid">
+
+        <!-- INPUT SECTION -->
+        <div class="sim-card">
+
+            <h2>Binary Inputs</h2>
+            <p class="sim-description">Select 0 or 1 for each input.</p>
+
+            <div class="input-controls">
+
+                <div class="input-box">
+                    <span class="input-label">INPUT A</span>
+                    <strong id="valueA">0</strong>
+                    <button id="toggleA" class="toggle-switch" type="button" role="switch" aria-checked="false" aria-label="Toggle input A"><span class="switch-state">OFF</span><span class="switch-track"><span class="switch-thumb"></span></span></button>
+                </div>
+
+                <div class="input-box">
+                    <span class="input-label">INPUT B</span>
+                    <strong id="valueB">0</strong>
+                    <button id="toggleB" class="toggle-switch" type="button" role="switch" aria-checked="false" aria-label="Toggle input B"><span class="switch-state">OFF</span><span class="switch-track"><span class="switch-thumb"></span></span></button>
+                </div>
+
+                <div class="input-box">
+                    <span class="input-label">CARRY IN</span>
+                    <strong id="valueCin">0</strong>
+                    <button id="toggleCin" class="toggle-switch" type="button" role="switch" aria-checked="false" aria-label="Toggle carry input"><span class="switch-state">OFF</span><span class="switch-track"><span class="switch-thumb"></span></span></button>
+                </div>
+
+            </div>
+
+            <button id="resetSimulator" class="reset-button" type="button"><span aria-hidden="true">↻</span> Reset Inputs</button>
+
+        </div>
+
+
+        <!-- OUTPUT SECTION -->
+        <div class="sim-card output-card">
+
+            <h2>Simulation Results</h2>
+            <p class="sim-description">Calculated output values.</p>
+
+            <div class="output-controls">
+
+                <div class="output-box sum-output">
+                    <span>SUM</span>
+                    <strong id="sumOutput">0</strong>
+                    <small>Sum bit</small>
+                </div>
+
+                <div class="output-box carry-output">
+                    <span>CARRY OUT</span>
+                    <strong id="carryOutput">0</strong>
+                    <small>Carry bit</small>
+                </div>
+
+            </div>
+
+            <div class="binary-result">
+                <span>FINAL BINARY RESULT</span>
+                <strong id="binaryResult">00</strong>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- CALCULATION EXPLANATION -->
+    <div class="sim-card explanation-card">
+
+        <h2>Calculation Explanation</h2>
+
+        <p class="sim-description">
+            Follow how the Full Adder calculates the outputs.
+        </p>
+
+        <div class="calculation-steps" id="calculationSteps">
+
+            <p>1. XOR calculation: A ⊕ B = 0</p>
+            <p>2. Sum calculation: 0 ⊕ Cin = 0</p>
+            <p>3. Carry calculation: 0</p>
+
+        </div>
+
+        <div class="equation-area">
+            <div>
+                <span>SUM FORMULA</span>
+                <strong>A ⊕ B ⊕ Cin</strong>
+            </div>
+
+            <div>
+                <span>CARRY FORMULA</span>
+                <strong>AB + ACin + BCin</strong>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+            
+<section class="page" id="circuit">
+
+    <div class="simulator-header">
+        <div>
+            <span class="eyebrow">DIGITAL CIRCUIT VISUALIZATION</span>
+            <h1>Full Adder Logic Circuit</h1>
+            <p>Watch how signals travel through the logic gates.</p>
+        </div>
+
+        <div class="live-status">
+            <span class="status-dot"></span>
+            LIVE CIRCUIT
+        </div>
+    </div>
+
+    <!-- CIRCUIT INPUT SUMMARY -->
+    <div class="circuit-inputs">
+        <div class="circuit-value">
+            <span>INPUT A</span>
+            <strong id="circuitA">0</strong>
+        </div>
+
+        <div class="circuit-value">
+            <span>INPUT B</span>
+            <strong id="circuitB">0</strong>
+        </div>
+
+        <div class="circuit-value">
+            <span>CARRY IN</span>
+            <strong id="circuitCin">0</strong>
+        </div>
+    </div>
+
+    <!-- CIRCUIT DIAGRAM -->
+    <div class="sim-card circuit-card">
+        <div class="circuit-heading">
+            <h2>Logic Gate Diagram</h2>
+            <span class="signal-legend">
+                <i class="legend-on"></i> Signal 1
+                <i class="legend-off"></i> Signal 0
+            </span>
+        </div>
+
+        <div class="circuit-scroll">
+
+            <svg class="circuit-svg"
+                 viewBox="0 0 950 460"
+                 role="img"
+                 aria-label="Full Adder circuit containing two XOR gates, two AND gates and one OR gate">
+
+                <!-- INPUT LABELS -->
+                <text x="25" y="65" class="wire-label">A</text>
+                <text x="25" y="145" class="wire-label">B</text>
+                <text x="25" y="375" class="wire-label">Cin</text>
+
+                <!-- INPUT WIRES -->
+                <path id="wireA" class="wire"
+                      d="M55 60 H150 V105 H210"/>
+
+                <path id="wireB" class="wire"
+                      d="M55 140 H170 V125 H210"/>
+
+                <path id="wireAand" class="wire"
+                      d="M150 60 V270 H210"/>
+
+                <path id="wireBand" class="wire"
+                      d="M170 140 V310 H210"/>
+
+                <!-- XOR 1 -->
+                <rect id="gateXor1" x="210" y="75" width="130" height="90"
+                      rx="14" class="gate-box"/>
+
+                <text x="275" y="115" class="gate-name">XOR</text>
+                <text x="275" y="140" class="gate-number">GATE 1</text>
+
+                <!-- XOR 1 OUTPUT -->
+                <path id="wireX" class="wire"
+                      d="M340 120 H440 V105 H500"/>
+
+                <!-- XOR 2 INPUT FROM CIN -->
+                <path id="wireCinXor" class="wire"
+                      d="M55 375 H465 V145 H500"/>
+
+                <!-- XOR 2 -->
+                <rect id="gateXor2" x="500" y="75" width="130" height="90"
+                      rx="14" class="gate-box"/>
+
+                <text x="565" y="115" class="gate-name">XOR</text>
+                <text x="565" y="140" class="gate-number">GATE 2</text>
+
+                <!-- SUM OUTPUT -->
+                <path id="wireSum" class="wire"
+                      d="M630 120 H770"/>
+
+                <text x="790" y="115" class="output-label">SUM</text>
+                <text x="790" y="140" id="svgSum" class="output-value">0</text>
+
+
+                <!-- AND 1 -->
+                <rect id="gateAnd1" x="210" y="245" width="130" height="90"
+                      rx="14" class="gate-box"/>
+
+                <text x="275" y="285" class="gate-name">AND</text>
+                <text x="275" y="310" class="gate-number">GATE 3</text>
+
+                <!-- AND 2 -->
+                <rect id="gateAnd2" x="500" y="245" width="130" height="90"
+                      rx="14" class="gate-box"/>
+
+                <text x="565" y="285" class="gate-name">AND</text>
+                <text x="565" y="310" class="gate-number">GATE 4</text>
+
+                <!-- XOR1 OUTPUT TO AND2 -->
+                <path id="wireXand" class="wire"
+                      d="M440 120 V290 H500"/>
+
+                <!-- CIN TO AND2 -->
+                <path id="wireCinAnd" class="wire"
+                      d="M465 375 V310 H500"/>
+
+                <!-- AND1 OUTPUT -->
+                <path id="wireP" class="wire"
+                      d="M340 290 H700 V270 H750"/>
+
+                <!-- AND2 OUTPUT -->
+                <path id="wireQ" class="wire"
+                      d="M630 290 H750"/>
+
+                <!-- OR GATE -->
+                <rect id="gateOr" x="750" y="235" width="120" height="100"
+                      rx="14" class="gate-box"/>
+
+                <text x="810" y="278" class="gate-name">OR</text>
+                <text x="810" y="305" class="gate-number">GATE 5</text>
+
+                <!-- CARRY OUTPUT -->
+                <path id="wireCarry" class="wire"
+                      d="M870 285 H920"/>
+
+                <text x="875" y="225" class="output-label">COUT</text>
+                <text x="905" y="315" id="svgCarry"
+                      class="output-value">0</text>
+
+                <!-- INTERMEDIATE LABELS -->
+                <text x="365" y="100" class="small-label">X</text>
+                <text x="350" y="275" class="small-label">P</text>
+                <text x="645" y="275" class="small-label">Q</text>
+
+            </svg>
+
+        </div>
+
+        <p class="circuit-hint">
+            <span class="status-dot"></span>
+            Change inputs in the Simulator page to update this circuit.
+        </p>
+    </div>
+
+
+    <!-- GATE EXPLANATIONS -->
+    <div class="section-heading">
+        <h2>Logic Gate Operations</h2>
+        <p>Understand the function of each gate.</p>
+    </div>
+
+    <div class="gate-grid">
+
+        <div class="gate-info">
+            <div class="gate-symbol xor-symbol">⊕</div>
+            <h3>XOR Gate</h3>
+            <p>Output is 1 when the two inputs are different.</p>
+        </div>
+
+        <div class="gate-info">
+            <div class="gate-symbol and-symbol">·</div>
+            <h3>AND Gate</h3>
+            <p>Output is 1 only when both inputs are 1.</p>
+        </div>
+
+        <div class="gate-info">
+            <div class="gate-symbol or-symbol">+</div>
+            <h3>OR Gate</h3>
+            <p>Output is 1 when at least one input is 1.</p>
+        </div>
+
+    </div>
+
+    <!-- INTERMEDIATE RESULTS -->
+    <div class="sim-card intermediate-card">
+        <h2>Intermediate Calculations</h2>
+
+        <div class="intermediate-grid">
+            <div>
+                <span>X = A XOR B</span>
+                <strong id="intermediateX">0</strong>
+            </div>
+
+            <div>
+                <span>P = A AND B</span>
+                <strong id="intermediateP">0</strong>
+            </div>
+
+            <div>
+                <span>Q = X AND Cin</span>
+                <strong id="intermediateQ">0</strong>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+            <!-- TRUTH TABLE PAGE -->
+            <section class="page" id="truth-table">
+                <div class="simulator-header">
+                    <div>
+                        <span class="eyebrow">DIGITAL FUNDAMENTALS</span>
+                        <h1>Full Adder Truth Table</h1>
+                        <p>All eight possible input combinations and their outputs.</p>
+                    </div>
+                    <div class="live-status"><span class="status-dot"></span> 8 COMBINATIONS</div>
+                </div>
+                <div class="truth-table-card">
+                    <div class="truth-table-heading">
+                        <h2>Truth Table</h2>
+                        <span class="status-badge">Live input highlight</span>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="truth-table">
+                            <thead><tr><th>A</th><th>B</th><th>Cin</th><th>Sum</th><th>Cout</th></tr></thead>
+                            <tbody id="truthTableBody"></tbody>
+                        </table>
+                    </div>
+                    <p class="table-note">The highlighted row follows the current inputs in the Full Adder Simulator.</p>
+                </div>
+            </section>
+
+            <section class="page" id="calculator">
+
+    <div class="simulator-header">
+        <div>
+            <span class="eyebrow">BINARY ARITHMETIC TOOL</span>
+            <h1>Binary Calculator</h1>
+            <p>Add binary numbers using Full Adder operations.</p>
+        </div>
+        <div class="live-status">
+            <span class="status-dot"></span>
+            READY
+        </div>
+    </div>
+
+    <div class="sim-card">
+
+        <h2>Enter Binary Numbers</h2>
+        <p class="sim-description">
+            Enter only 0 and 1. You can add numbers up to 16 bits.
+        </p>
+
+        <div class="calculator-input-grid">
+
+            <div class="calculator-field">
+                <label for="binaryA">FIRST NUMBER (A)</label>
+                <input type="text" id="binaryA"
+                       placeholder="Example: 1011"
+                       maxlength="16" autocomplete="off">
+            </div>
+
+            <div class="calculator-field">
+                <label for="binaryB">SECOND NUMBER (B)</label>
+                <input type="text" id="binaryB"
+                       placeholder="Example: 0110"
+                       maxlength="16" autocomplete="off">
+            </div>
+
+        </div>
+
+        <div class="calculator-actions">
+            <button class="primary-button" id="calculateBinary">
+                Calculate Addition →
+            </button>
+
+            <button class="reset-button" id="resetBinary">
+                Reset
+            </button>
+        </div>
+
+        <p id="binaryError" class="binary-error" role="alert"></p>
+
+    </div>
+
+
+    <!-- RESULT -->
+    <div class="sim-card">
+
+        <h2>Calculation Result</h2>
+
+        <div class="binary-result-display">
+
+            <div>
+                <span>FIRST NUMBER</span>
+                <strong id="displayBinaryA">----</strong>
+            </div>
+
+            <div>
+                <span>SECOND NUMBER</span>
+                <strong id="displayBinaryB">----</strong>
+            </div>
+
+            <div>
+                <span>FINAL ANSWER</span>
+                <strong id="displayBinaryResult">----</strong>
+            </div>
+
+        </div>
+
+        <div class="decimal-result">
+            Decimal equivalent:
+            <strong id="decimalResult">----</strong>
+        </div>
+
+    </div>
+
+
+    <!-- BIT-BY-BIT EXPLANATION -->
+    <div class="sim-card">
+
+        <h2>Full Adder Step-by-Step Calculation</h2>
+
+        <p class="sim-description">
+            Each row shows how one Full Adder processes a pair of bits
+            and the incoming carry.
+        </p>
+
+        <div class="table-scroll">
+
+            <table class="binary-steps-table">
+                <thead>
+                    <tr>
+                        <th>Bit</th>
+                        <th>A</th>
+                        <th>B</th>
+                        <th>Carry In</th>
+                        <th>Sum</th>
+                        <th>Carry Out</th>
+                    </tr>
+                </thead>
+
+                <tbody id="binaryStepsBody">
+                    <tr>
+                        <td colspan="6">
+                            Enter two binary numbers to see the calculation.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+           
+<section class="page" id="learning">
+
+    <div class="simulator-header">
+        <div>
+            <span class="eyebrow">LEARN DIGITAL ELECTRONICS</span>
+            <h1>Full Adder Learning Mode</h1>
+            <p>Understand the concept from the basics.</p>
+        </div>
+    </div>
+
+    <!-- Truth table appears first; scroll down for lessons -->
+    <div class="truth-table-card learning-truth-card">
+        <div class="truth-table-heading">
+            <h2>Full Adder Truth Table</h2>
+            <span class="status-badge">8 Combinations</span>
+        </div>
+        <div class="table-responsive">
+            <table class="truth-table">
+                <thead><tr><th>A</th><th>B</th><th>Cin</th><th>Sum</th><th>Cout</th></tr></thead>
+                <tbody id="learningTruthTableBody"></tbody>
+            </table>
+        </div>
+        <p class="table-note">Scroll down to continue with the lessons.</p>
+    </div>
+
+    <div class="learning-card">
+
+        <span class="learning-number">LESSON 01</span>
+        <h2>What is a Full Adder?</h2>
+
+        <p>
+            A Full Adder is a combinational logic circuit.
+            It adds three binary inputs: A, B and Carry-in.
+            It produces two outputs: Sum and Carry-out.
+        </p>
+
+    </div>
+
+    <div class="learning-card">
+
+        <span class="learning-number">LESSON 02</span>
+        <h2>Full Adder Inputs</h2>
+
+        <ul class="learning-list">
+            <li><strong>A:</strong> First binary input.</li>
+            <li><strong>B:</strong> Second binary input.</li>
+            <li><strong>Cin:</strong> Carry received from the previous bit.</li>
+        </ul>
+
+    </div>
+
+    <div class="learning-card">
+
+        <span class="learning-number">LESSON 03</span>
+        <h2>Full Adder Outputs</h2>
+
+        <ul class="learning-list">
+            <li><strong>Sum:</strong> The result bit of the addition.</li>
+            <li><strong>Cout:</strong> The carry sent to the next bit.</li>
+        </ul>
+
+    </div>
+
+    <div class="learning-card">
+
+        <span class="learning-number">LESSON 04</span>
+        <h2>Full Adder Formulas</h2>
+
+        <div class="learning-formula">
+            <span>SUM</span>
+            <strong>Sum = A XOR B XOR Cin</strong>
+
+            <span>CARRY OUT</span>
+            <strong>Cout = AB + ACin + BCin</strong>
+        </div>
+
+    </div>
+
+    <div class="learning-card">
+
+        <span class="learning-number">LESSON 05</span>
+        <h2>Example Calculation</h2>
+
+        <p>Let's calculate 1 + 1 + 1.</p>
+
+        <div class="learning-example">
+            <p>1 + 1 + 1 = 3 in decimal</p>
+            <strong>11 in binary</strong>
+            <p>Sum = 1 and Carry-out = 1</p>
+        </div>
+
+    </div>
+
+    <div class="learning-card">
+
+        <span class="learning-number">LESSON 06</span>
+        <h2>Where is a Full Adder Used?</h2>
+
+        <ul class="learning-list">
+            <li>Arithmetic Logic Unit (ALU).</li>
+            <li>Computer processors.</li>
+            <li>Binary addition circuits.</li>
+            <li>Digital calculators.</li>
+        </ul>
+
+    </div>
+
+</section>
+
+
+            <section class="page" id="quiz">
+                <div class="simulator-header">
+                    <div>
+                        <span class="eyebrow">CHECK YOUR KNOWLEDGE</span>
+                        <h1>Practice &amp; Quiz</h1>
+                        <p>Answer five questions about Full Adders and check your score.</p>
+                    </div>
+                </div>
+                <div class="quiz-card">
+                    <div class="quiz-top">
+                        <h2>Full Adder Quiz</h2>
+                        <span id="questionNumber">Question 1 of 5</span>
+                    </div>
+                    <div class="quiz-progress"><div id="quizProgressBar"></div></div>
+                    <h3 id="quizQuestion">Loading question...</h3>
+                    <div id="quizOptions" class="quiz-options"></div>
+                    <p id="quizFeedback" class="quiz-feedback" aria-live="polite"></p>
+                    <div class="quiz-actions">
+                        <button id="submitAnswer" class="primary-button" type="button">Submit Answer</button>
+                        <button id="nextQuestion" class="primary-button" type="button" hidden>Next Question →</button>
+                    </div>
+                    <div id="quizResult" hidden>
+                        <h2>Quiz Completed!</h2>
+                        <p class="quiz-score-label">Your score</p>
+                        <h1 id="finalScore">0 / 5</h1>
+                        <p id="scoreMessage"></p>
+                        <button id="restartQuiz" class="primary-button" type="button">Try Again</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="page" id="history">
+                <div class="simulator-header">
+                    <div>
+                        <span class="eyebrow">RECENT ACTIVITY</span>
+                        <h1>Calculation History</h1>
+                        <p>Your Full Adder calculations are saved in this browser.</p>
+                    </div>
+                    <button id="clearHistory" class="reset-button" type="button">Clear History</button>
+                </div>
+                <div class="sim-card history-card">
+                    <div class="table-responsive">
+                        <table class="truth-table history-table">
+                            <thead><tr><th>Date &amp; Time</th><th>A</th><th>B</th><th>Cin</th><th>Sum</th><th>Cout</th><th>Result</th></tr></thead>
+                            <tbody id="historyTableBody"><tr><td colspan="7">No calculations saved yet. Use the simulator first.</td></tr></tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <section class="page" id="about">
+                <div class="simulator-header">
+                    <div><span class="eyebrow">COMBINED ASSIGNMENT</span><h1>About LogicLab</h1><p>An interactive Full Adder learning and simulation platform.</p></div>
+                </div>
+                <div class="sim-card about-card">
+                    <h2>Project Aim</h2>
+                    <p>To demonstrate how a Full Adder adds three one-bit binary inputs and produces a Sum bit and a Carry-out bit through an interactive website.</p>
+                    <h2>Subject Integration</h2>
+                    <ul class="about-list">
+                        <li><strong>Digital Fundamentals:</strong> Full Adder, Boolean expressions, logic gates and truth table.</li>
+                        <li><strong>Computer Architecture:</strong> binary arithmetic and the role of arithmetic circuits in a processor's ALU.</li>
+                        <li><strong>Data Structures using C:</strong> arrays store the eight input combinations and their outputs; linear search can locate a combination.</li>
+                        <li><strong>Software Engineering:</strong> requirements, design, implementation, testing and documentation.</li>
+                    </ul>
+                    <h2>Technology Used</h2>
+                    <p>HTML, CSS and JavaScript for the frontend; Node.js and Express for the backend; C for Full Adder calculation; browser LocalStorage for theme and calculation history.</p>
+                    <h2>Full Adder Equations</h2>
+                    <p><strong>Sum = A XOR B XOR Cin</strong></p>
+                    <p><strong>Cout = (A AND B) OR (Cin AND (A XOR B))</strong></p>
+                </div>
+            </section>
+
+            <footer class="footer">
+                <p>LogicLab © 2026 | Full Adder Simulator | Digital Logic Learning Platform</p>
+            </footer>
+
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
